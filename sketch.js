@@ -93,7 +93,30 @@ function draw() {
         
       }
 
+  
+  
+  
+  
+  
+  
+        if(input.value() == numOne + numTwo && touches.length>0){
+        main()
+    
+        touches.length = []
+        score = score+1;
+        input.value(null)
+        pass.play()
+        
+      }else if(input.value() !== numOne + numTwo && mouseIsOver(button) && mouseWentDown(LEFT) || input.value !== numOne+numTwo && keyWentDown(ENTER)){
       
+    
+  
+        score = score-1;
+        input.value(null)
+        nope.play()
+        
+      }
+  
       textSize(90)
       fill("BLACK")
       textFont("Comic Sans MS")
