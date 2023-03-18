@@ -99,7 +99,8 @@ function draw() {
   
   
   
-        if(input.value() == numOne + numTwo && touches.length>0){
+        if(input.value() == numOne + numTwo && mouseIsOver(button) && 
+           touches.length>0){
         main()
     
         touches.length = []
@@ -107,7 +108,7 @@ function draw() {
         input.value(null)
         pass.play()
         
-      }else if(input.value() !== numOne + numTwo && mouseIsOver(button) && mouseWentDown(LEFT) || input.value !== numOne+numTwo && keyWentDown(ENTER)){
+      }else if(input.value() !== numOne + numTwo && mouseIsOver(button) && touches.length>0)){
       
     
   
